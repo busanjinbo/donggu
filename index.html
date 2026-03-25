@@ -183,9 +183,17 @@
                 </button>
             </div>
             
+            <!-- 후원문의 -->
+            <div class="mb-3 bg-graylight rounded-xl border border-gray-200">
+                <button class="w-full flex items-center justify-center gap-2 p-5 text-lg md:text-xl font-bold text-dark hover:bg-sky-50 transition-colors rounded-xl focus:outline-none" onclick="copyPhoneNumber('010-4855-7229')" title="클릭하여 번호 복사">
+                    <span>후원 문의 : <span class="text-secondarydark font-black">010-4855-7229</span></span>
+                    <svg class="w-5 h-5 text-graytext" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                </button>
+            </div>
+
             <!-- 후원상세안내 아코디언 -->
             <div class="mt-4 bg-graylight rounded-xl border border-gray-200">
-                <button id="donate-detail-btn" class="w-full flex items-center justify-between p-5 text-lg md:text-xl font-bold text-dark hover:bg-sky-50 transition-colors rounded-xl focus:outline-none">
+                <button id="donate-detail-btn" class="w-full flex items-center justify-center gap-2 p-5 text-lg md:text-xl font-bold text-dark hover:bg-sky-50 transition-colors rounded-xl focus:outline-none">
                     <span>후원상세안내</span>
                     <svg id="donate-detail-icon" class="w-6 h-6 text-graytext transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
@@ -282,74 +290,115 @@
     <!-- 4. 지역활동 소개 섹션 -->
     <section id="activity" class="py-20 md:py-28 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black text-dark mb-4 break-keep">민원대장, 봉사대장, 코빼기대장이 되겠습니다!</h2>
-                <div class="w-16 h-1.5 bg-secondary mx-auto"></div>
-            </div>
-            
-            <div class="space-y-12 md:space-y-16">
-                <!-- 활동 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
-                        <img src="./assets/activity1.png" alt="쓰레기줍기 봉사활동" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <p class="text-lg text-graytext break-keep leading-relaxed bg-sky-50 px-5 py-6 rounded-xl font-medium border border-sky-100 shadow-sm">
-                            쓰레기줍기 봉사활동
-                        </p>
-                    </div>
-                </div>
+            <!-- 추가된 후보 활동+업적 (민원대장, 봉사대장, 코빼기대장) -->
+            <div class="mb-24 w-full">
                 
-                <!-- 활동 2 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
-                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
-                        <img src="./assets/activity2.png" alt="등하교 안전지킴이 서명운동" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
+                <!-- 민원대장 봉사대장 파트 -->
+                <div class="text-center mb-20 w-full">
+                    <h3 class="text-4xl md:text-5xl font-black text-[#1e3a8a] tracking-tight mb-8" style="font-style: italic; font-weight: 900;">민원대장 봉사대장</h3>
+                    
+                    <div class="w-full max-w-4xl mx-auto border-t-[3px] border-[#1e3a8a] pt-8 mb-12">
+                        <!-- 첫번째 이미지 & 핑크 배너 -->
+                        <div class="bg-white mb-10 w-full relative">
+                            <img src="./assets/activity6.png" alt="동구주민대회" class="w-full h-auto object-cover border border-gray-200 shadow-sm">
+                            <div class="bg-[#e83f74] text-white py-3 md:py-5 px-4 text-center">
+                                <h4 class="text-2xl md:text-4xl font-black tracking-tight drop-shadow-sm">주민의 힘으로 동구를 바꿔왔습니다</h4>
+                            </div>
+                        </div>
+
+                        <!-- 두번째 이미지 & 텍스트 설명 -->
+                        <div class="flex flex-col md:flex-row items-center gap-6 text-left w-full mb-10">
+                            <div class="w-full md:w-1/2">
+                                <img src="./assets/activity7.png" alt="주민투표" class="w-full h-auto object-cover border border-gray-200 shadow-sm">
+                            </div>
+                            <div class="w-full md:w-1/2 md:pl-4">
+                                <h4 class="text-2xl md:text-3xl font-black text-dark mb-4 leading-snug break-keep">
+                                    동구청 예산,<br>주민이 필요한 곳에<br>쓰이고 있나요?
+                                </h4>
+                                <p class="text-[1.1rem] text-graytext font-medium leading-loose break-keep">
+                                    1회·2회 동구주민대회를 통해<br>
+                                    <strong class="text-dark">정책제안 2,158명, 주민투표 7,076명</strong><br>
+                                    <strong class="text-dark">총 9,234명의 주민</strong>을 만나며<br>
+                                    동구주민요구안을 만들었습니다.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <p class="text-lg text-graytext break-keep leading-relaxed bg-sky-50 px-5 py-6 rounded-xl font-medium border border-sky-100 shadow-sm">
-                            등하교 안전지킴이 서명운동
+
+                    <!-- 하단 강조 문구 -->
+                    <div class="w-full max-w-4xl mx-auto border-t-[3px] border-b-[3px] border-[#1e3a8a] py-6">
+                        <p class="text-xl md:text-3xl font-black text-[#1e3a8a] leading-snug break-keep tracking-tight">
+                            직접 발로 뛰면서 모아낸 소중한 민원들,<br>
+                            구의원 고창식이 1순위로 추진하겠습니다
                         </p>
                     </div>
                 </div>
 
-                <!-- 활동 3 -->
+                <!-- 코빼기대장 파트 -->
+                <div class="text-center w-full">
+                    <h3 class="text-4xl md:text-5xl font-black text-[#1e3a8a] tracking-tight mb-8 leading-snug" style="font-style: italic; font-weight: 900;">
+                        코빼기대장<span class="text-3xl md:text-4xl" style="font-style: normal;">으로</span><br>달려왔습니다!
+                    </h3>
+                    
+                    <div class="w-full max-w-4xl mx-auto border-t-[3px] border-[#e83f74] pt-8 mb-12">
+                        <!-- 상단 강조 문구 -->
+                        <div class="w-full max-w-4xl mx-auto mb-10">
+                            <p class="text-xl md:text-2xl font-bold text-graytext leading-snug break-keep mb-3">
+                                크고 작은 불편으로 민원이 생겼을 때,<br>과연 주민 곁에 누가 있었나요?
+                            </p>
+                            <p class="text-2xl md:text-4xl font-black text-[#1e3a8a] tracking-tight">
+                                고창식이 바로 달려가겠습니다!
+                            </p>
+                        </div>
+
+                        <!-- 이미지 그리드 -->
+                        <div class="w-full flex flex-col gap-4 mb-4">
+                            <!-- Row 1 -->
+                            <div class="flex flex-col sm:flex-row gap-4 w-full">
+                                <div class="w-full sm:w-1/3 rounded-xl overflow-hidden shadow-sm flex flex-col bg-white border border-gray-100">
+                                    <img src="./assets/activity1.png" alt="쓰레기 줍기 봉사활동" class="w-full h-56 md:h-64 object-cover">
+                                    <div class="bg-[#e83f74] text-white py-3 px-2 text-center text-sm md:text-[1.05rem] font-bold mt-auto h-[3.5rem] flex items-center justify-center">
+                                        쓰레기 줍기 봉사활동
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/3 rounded-xl overflow-hidden shadow-sm flex flex-col bg-white border border-gray-100">
+                                    <img src="./assets/activity2.png" alt="등하교 안전지킴이 활동" class="w-full h-56 md:h-64 object-cover">
+                                    <div class="bg-[#e83f74] text-white py-3 px-2 text-center text-sm md:text-[1.05rem] font-bold mt-auto h-[3.5rem] flex items-center justify-center">
+                                        등하교 안전지킴이 활동
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/3 rounded-xl overflow-hidden shadow-sm flex flex-col bg-white border border-gray-100">
+                                    <img src="./assets/activity3.png" alt="빈집 내 오동나무 철거 해결" class="w-full h-56 md:h-64 object-cover">
+                                    <div class="bg-[#e83f74] text-white py-3 px-2 text-center text-sm md:text-[1.05rem] font-bold mt-auto h-[3.5rem] flex items-center justify-center">
+                                        빈집 내 오동나무 철거 해결
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="flex flex-col sm:flex-row gap-4 w-full">
+                                <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm flex flex-col bg-white border border-gray-100">
+                                    <img src="./assets/activity4.png" alt="쓰레기더미 집단민원으로 해결" class="w-full h-64 md:h-72 object-cover">
+                                    <div class="bg-[#e83f74] text-white py-3 px-2 text-center text-md md:text-lg font-bold mt-auto h-[4rem] flex items-center justify-center">
+                                        쓰레기더미 집단민원으로 해결
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm flex flex-col bg-white border border-gray-100">
+                                    <img src="./assets/activity5.png" alt="민원, 민생, 가계부채 상담활동" class="w-full h-64 md:h-72 object-cover">
+                                    <div class="bg-[#e83f74] text-white py-3 px-2 text-center text-md md:text-lg font-bold mt-auto h-[4rem] flex items-center justify-center">
+                                        민원, 민생, 가계부채 상담활동
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 개별 활동 내역 복구 -->
+            <div class="space-y-12 md:space-y-16">
+                <!-- 활동 1 -->
                 <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
-                        <img src="./assets/activity3.png" alt="빈집내 오동나무 철거 해결" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <p class="text-lg text-graytext break-keep leading-relaxed bg-sky-50 px-5 py-6 rounded-xl font-medium border border-sky-100 shadow-sm">
-                            빈집내 오동나무 철거 해결
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- 활동 4 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
-                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
-                        <img src="./assets/activity4.png" alt="쓰레기더미 집단민원으로 해결" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <p class="text-lg text-graytext break-keep leading-relaxed bg-sky-50 px-5 py-6 rounded-xl font-medium border border-sky-100 shadow-sm">
-                            쓰레기더미 집단민원으로 해결
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- 활동 5 -->
-                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
-                        <img src="./assets/activity5.png" alt="민원, 민생, 가계부채 상담활동" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <p class="text-lg text-graytext break-keep leading-relaxed bg-sky-50 px-5 py-6 rounded-xl font-medium border border-sky-100 shadow-sm">
-                            민원, 민생, 가계부채 상담활동
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- 활동 6 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
                     <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
                         <img src="./assets/activity6.png" alt="1,2회 동구주민대회 주민투표 활동" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
                     </div>
@@ -360,8 +409,8 @@
                     </div>
                 </div>
                 
-                <!-- 활동 7 -->
-                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+                <!-- 활동 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
                     <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
                         <img src="./assets/activity7.png" alt="1,2회 동구주민대회 위원장 역임" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
                     </div>
@@ -372,79 +421,247 @@
                     </div>
                 </div>
                 
-                <!-- 활동 8 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
-                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
-                        <img src="./assets/activity8.png" alt="동구 쓰레기 줍기 봉사활동" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <p class="text-lg text-graytext break-keep leading-relaxed bg-sky-50 px-5 py-6 rounded-xl font-medium border border-sky-100 shadow-sm">
-                            동구 쓰레기 줍기 봉사활동
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- 활동 9 -->
-                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm bg-gray-100 border border-gray-100">
-                        <img src="./assets/activity9.png" alt="동구 주민 민원, 민생 상담 및 가계부채 상담" class="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <p class="text-lg text-graytext break-keep leading-relaxed bg-sky-50 px-5 py-6 rounded-xl font-medium border border-sky-100 shadow-sm">
-                            동구 주민 민원, 민생 상담 및 가계부채 상담
-                        </p>
-                    </div>
-                </div>
             </div>
+
+
         </div>
     </section>
 
     <!-- 5. 공약 홍보 섹션 -->
-    <section id="pledge" class="py-20 md:py-32 bg-sky-50 relative border-t border-secondary/20 min-h-[500px]">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center mb-10">
-            <h2 class="text-3xl md:text-5xl font-black text-dark mb-4">주민을 위한 약속 (공약)</h2>
-            <div class="w-16 h-1.5 bg-secondary mx-auto"></div>
-        </div>
+    <section id="pledge" class="py-20 md:py-28 bg-graylight relative border-t border-secondary/20">
         
-        <!-- 공보물이 아직 안 나온 상태 - '준비중입니다' 안내 패널 -->
-        <div class="absolute inset-x-0 bottom-0 top-[180px] flex items-center justify-center pointer-events-none px-4 z-20 pb-10">
-            <div class="bg-white/95 px-8 md:px-16 py-12 rounded-3xl shadow-xl text-center border-4 border-secondary/50 max-w-2xl w-full">
-                <!-- 아이콘 모양 -->
-                <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 text-white rotate-12">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-16">
+            
+            <!-- 공약 1: 관행 타파 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                <!-- 상단 배너 영역 (이미지 대체 디자인) -->
+                <div class="relative bg-gradient-to-br from-gray-100 to-gray-200 py-16 px-6 sm:px-12 text-center border-b-[4px] border-[#e83f74] overflow-hidden">
+                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#e83f74 2px, transparent 2px); background-size: 30px 30px;"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl md:text-5xl font-black text-dark mb-4 tracking-tight shadow-white drop-shadow-md">
+                            <span class="text-[#e83f74] text-4xl md:text-6xl mr-1">관행</span> 이라구요?
+                        </h3>
+                        <h4 class="text-4xl md:text-6xl font-black text-dark italic tracking-tight shadow-white drop-shadow-md">
+                            고창식은 <span class="text-white bg-dark px-2 py-1 not-italic rounded-lg">이의 있습니다!</span>
+                        </h4>
+                    </div>
                 </div>
-                <h3 class="text-3xl md:text-4xl font-black text-dark mb-4">공약 준비중입니다</h3>
-                <p class="text-lg md:text-xl text-graytext font-medium break-keep">
-                    주민 여러분과 함께할 소중한 약속들을 꼼꼼하게 다듬고 있습니다.<br>
-                    예비공보물 발행 시기에 맞춰 곧 업데이트 하도록 하겠습니다.
-                </p>
+
+                <!-- 하단 내용 영역 -->
+                <div class="py-10 px-6 sm:px-12 space-y-12">
+                    <!-- 항목 1 -->
+                    <div>
+                        <h4 class="text-2xl md:text-3xl font-black text-[#1e3a8a] mb-6 flex items-center tracking-tight">
+                            구의회의 관행 <span class="text-[#e83f74] mx-2 text-3xl md:text-4xl">싹</span> 바꾸겠습니다!
+                        </h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep">구의원 관광성 해외연수, 근절하겠습니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep">동구 예산집행 감시, 철저히 하겠습니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep">찾아가는 의정보고회, 매일 열려있는 주민상담</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 항목 2 -->
+                    <div>
+                        <h4 class="text-2xl md:text-3xl font-black text-[#1e3a8a] mb-6 flex items-center tracking-tight">
+                            주민의 목소리 <span class="text-[#e83f74] mx-2 text-3xl md:text-4xl">제대로</span> 듣겠습니다!
+                        </h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep">앉아서 접수받는 민원시대를 끝내겠습니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep">발로 뛰며 민원을 먼저 찾아내겠습니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-gray-400 mr-2 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep">주민대회를 정례화하고 민원을 싹 해결하겠습니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- 카드 UI (내용 업데이트 전까지 안내문 뒤에 블러 숨김 보존) -->
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-0 opacity-20 pointer-events-none blur-[2px]">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 카드 예시 -->
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                    <span class="inline-block px-3 py-1 bg-secondary text-dark text-sm font-bold rounded-lg mb-4">핵심공약 1</span>
-                    <h4 class="text-xl font-bold mb-3 text-dark">공약 제목이 들어갈 자리입니다</h4>
-                    <p class="text-graytext text-sm leading-relaxed">상세 공약 설명이 이곳에 들어갑니다. 단락 단위로 상세히 작성 가능합니다.</p>
+
+            <!-- 공약 2: 살기 좋은 동구 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                <!-- 상단 배너 영역 (사진 교체 반영) -->
+                <div class="relative bg-gray-900 pt-24 pb-12 px-6 sm:px-12 text-left border-b-[4px] border-secondary overflow-hidden flex items-end min-h-[250px] md:min-h-[300px]">
+                    <!-- 상단 이미지만 보이도록 background-position: center top 적용 -->
+                    <div class="absolute inset-0 bg-cover bg-no-repeat" style="background-image: url('./assets/pledge2.png'); background-position: center top;"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    <div class="relative z-10 w-full">
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight drop-shadow-lg leading-tight">
+                            편안하고,<br>안전하고, 살기 좋은 동구
+                        </h3>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                    <span class="inline-block px-3 py-1 bg-secondary text-dark text-sm font-bold rounded-lg mb-4">핵심공약 2</span>
-                    <h4 class="text-xl font-bold mb-3 text-dark">공약 제목이 들어갈 자리입니다</h4>
-                    <p class="text-graytext text-sm leading-relaxed">상세 공약 설명이 이곳에 들어갑니다. 단락 단위로 상세히 작성 가능합니다.</p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                    <span class="inline-block px-3 py-1 bg-secondary text-dark text-sm font-bold rounded-lg mb-4">핵심공약 3</span>
-                    <h4 class="text-xl font-bold mb-3 text-dark">공약 제목이 들어갈 자리입니다</h4>
-                    <p class="text-graytext text-sm leading-relaxed">상세 공약 설명이 이곳에 들어갑니다. 단락 단위로 상세히 작성 가능합니다.</p>
+
+                <!-- 하단 내용 영역 (다시 복구함) -->
+                <div class="py-10 px-6 sm:px-12 space-y-12 bg-white">
+                    <!-- 어르신 -->
+                    <div class="text-center md:text-right">
+                        <h4 class="text-3xl md:text-4xl font-black text-[#3b82f6] mb-5 tracking-tight inline-block border-b-2 border-[#3b82f6] pb-2">
+                            어르신이 편안한 동구
+                        </h4>
+                        <ul class="space-y-3 flex flex-col items-center md:items-end">
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left md:text-right">산복도로 교통 불편 개선</span>
+                            </li>
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left md:text-right">가파른 도로·계단 안전시설 정비</span>
+                            </li>
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left md:text-right">벤치·쉼터·운동 공간 확충</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 아이 -->
+                    <div class="text-center md:text-left">
+                        <h4 class="text-3xl md:text-4xl font-black text-[#22c55e] mb-5 tracking-tight inline-block border-b-2 border-[#22c55e] pb-2">
+                            아이 키우기 좋은 동구
+                        </h4>
+                        <ul class="space-y-3 flex flex-col items-center md:items-start">
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left">어린이 도서관, 놀이터 정비</span>
+                            </li>
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left">출산 가정 지원 확대</span>
+                            </li>
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left">등하교 안전지도사 활성화</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 청년/여성 -->
+                    <div class="text-center md:text-right">
+                        <h4 class="text-3xl md:text-4xl font-black text-[#991b1b] mb-5 tracking-tight inline-block border-b-2 border-[#991b1b] pb-2">
+                            청년/여성이 안심하고 사는 동구
+                        </h4>
+                        <ul class="space-y-3 flex flex-col items-center md:items-end">
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left md:text-right">골목길, 주민이 요구하는 곳 CCTV 확충</span>
+                            </li>
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left md:text-right">빈집 밀집지역 순찰 강화</span>
+                            </li>
+                            <li class="flex gap-2 w-fit">
+                                <span class="text-gray-400 font-bold mt-1">·</span>
+                                <span class="text-lg md:text-xl text-dark font-medium break-keep text-left md:text-right">청년 월세 안심계약 도움서비스 추진</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
-    <!-- 6. 푸터 -->
+    <!-- 6. 최종 투표 독려 섹션 (새로 추가) -->
+    <section id="vote-appeal" class="py-20 bg-white border-t-2 border-secondary/20 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <!-- 상단 슬로건 텍스트 -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black text-dark mb-4 tracking-tight leading-snug break-keep">
+                    <span class="text-[#e83f74]">3명 뽑는</span> 구의원선거<br>
+                    1명은 <span class="text-[#e83f74]">진짜 봉사일꾼</span> 고창식으로!
+                </h2>
+            </div>
+
+            <!-- 투표용지 UI 구현 -->
+            <div class="max-w-md mx-auto bg-white border border-gray-400 rounded-sm shadow-md mb-16 p-4 md:p-6">
+                <div class="text-center text-xl md:text-2xl font-bold text-dark mb-6 tracking-widest border-b border-gray-300 pb-4">
+                    구의원선거 투표용지
+                </div>
+                
+                <div class="space-y-3 font-semibold text-lg md:text-xl text-dark">
+                    <!-- 투표칸 1 -->
+                    <div class="flex border border-gray-400 divide-x divide-gray-400 bg-white">
+                        <div class="w-16 md:w-20 text-center py-2">1-가</div>
+                        <div class="w-24 md:w-32 text-center py-2">OO당</div>
+                        <div class="flex-grow text-center py-2">OOO</div>
+                        <div class="w-12 md:w-16"></div>
+                    </div>
+                    <!-- 투표칸 2 -->
+                    <div class="flex border border-gray-400 divide-x divide-gray-400 bg-white">
+                        <div class="w-16 md:w-20 text-center py-2">1-나</div>
+                        <div class="w-24 md:w-32 text-center py-2">OO당</div>
+                        <div class="flex-grow text-center py-2">OOO</div>
+                        <div class="w-12 md:w-16"></div>
+                    </div>
+                    <!-- 투표칸 3 -->
+                    <div class="flex border border-gray-400 divide-x divide-gray-400 bg-white">
+                        <div class="w-16 md:w-20 text-center py-2">2-가</div>
+                        <div class="w-24 md:w-32 text-center py-2">OO당</div>
+                        <div class="flex-grow text-center py-2">OOO</div>
+                        <div class="w-12 md:w-16"></div>
+                    </div>
+                    <!-- 투표칸 4 -->
+                    <div class="flex border border-gray-400 divide-x divide-gray-400 bg-white">
+                        <div class="w-16 md:w-20 text-center py-2">2-나</div>
+                        <div class="w-24 md:w-32 text-center py-2">OO당</div>
+                        <div class="flex-grow text-center py-2">OOO</div>
+                        <div class="w-12 md:w-16"></div>
+                    </div>
+                    
+                    <!-- 투표칸 5 (고창식 강조) -->
+                    <div class="flex border-2 border-red-600 divide-x-2 divide-gray-400 bg-[#ffe8aa]">
+                        <div class="w-16 md:w-20 text-center py-2 font-black text-2xl">5</div>
+                        <div class="w-24 md:w-32 text-center py-2 font-black tracking-widest text-xl">진보당</div>
+                        <div class="flex-grow text-center py-2 font-black tracking-widest text-[#1e3a8a] text-xl md:text-2xl">고창식</div>
+                        <div class="w-12 md:w-16 text-center text-red-600 flex items-center justify-center relative">
+                            <!-- 도장 기표 마크 SVG -->
+                            <svg class="w-8 h-8 absolute" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2.5" class="text-red-500"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 하단 마무리 로고 텍스트 타이포그래피 -->
+            <div class="text-center w-full flex flex-col items-center">
+                
+                <!-- 상단 보조 문구 -->
+                <div class="mb-4 text-xl md:text-3xl font-black tracking-tight inline-flex justify-center items-center px-6 py-3 rounded-full bg-gray-100 shadow-sm border border-gray-200">
+                    <span class="text-[#e83f74]">동구 일할 사람</span>
+                </div>
+
+                <!-- 메인 로고 텍스트 (채운 색상) -->
+                <div class="inline-flex items-center justify-center gap-2 md:gap-4 font-black">
+                    <!-- 숫자 5 -->
+                    <span class="text-[6rem] md:text-[8rem] lg:text-[10rem] text-[#e83f74] tracking-tighter drop-shadow-md" style="line-height: 0.8;">5</span>
+                    <!-- 고창식 -->
+                    <span class="text-[4rem] md:text-[6rem] lg:text-[8rem] text-[#1e3a8a] tracking-tighter drop-shadow-md" style="line-height: 0.8;">고창식</span>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. 푸터 -->
     <footer class="bg-dark text-white pt-10 pb-8 mt-auto">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
             <div class="text-gray-400 font-light text-sm md:text-base mb-6 space-y-2">
